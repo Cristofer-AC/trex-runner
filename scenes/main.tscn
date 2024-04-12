@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://drkdln7vw5bly"]
+
+[ext_resource type="PackedScene" uid="uid://djrro30a6i1q4" path="res://scenes/parallax_background.tscn" id="1_32viy"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_tbbwg"]
+[ext_resource type="PackedScene" uid="uid://bjm0hngy4pfui" path="res://scenes/ground.tscn" id="2_c3cbn"]
+[ext_resource type="PackedScene" uid="uid://ypv3uysuctlm" path="res://scenes/dino.tscn" id="3_eupu8"]
+[ext_resource type="PackedScene" uid="uid://dt14422ln1q7i" path="res://scenes/hud.tscn" id="5_g4q5y"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_tbbwg")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_32viy")]
+
+[node name="Ground" parent="." instance=ExtResource("2_c3cbn")]
+
+[node name="Dino" parent="." instance=ExtResource("3_eupu8")]
+position = Vector2(118, 488)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("5_g4q5y")]
